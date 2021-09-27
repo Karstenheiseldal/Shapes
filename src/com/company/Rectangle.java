@@ -1,61 +1,29 @@
 package com.company;
 
 public class Rectangle extends Shapes {
-        int x1;
-        int x2;
-        int y1;
-        int y2;
-        public String name;
+    int x1Rec;
+    int x2Rec;
+    int y1Rec;
+    int y2Rec;
 
-        public Rectangle(String name){
-            this.name = name;
-        }
+    String nameRectangle;
 
     @Override
-    public String setName(String name) {
-    this.name = name;
-    return this.name;
+    public void setName(String name) {
+        nameRectangle = name;
     }
 
     @Override
-        public void getName(String name) {
-            return;
-        }
-
-
-        public void getName() {
-            System.out.println("the name is"+ name);
-        }
-
-        @Override
-        public void setShape(int x1, int x2, int y1, int y2) {
-
-        }
-
-        @Override
-        public void getShape(int x1, int x2, int y1, int y2) {
-
-
-        }
-
-        @Override
-        public void calculateShapeArea(String name) {
-
-        }
-
-        @Override
-        public void calculateShapeCircimfurence(String name) {
-
-        }
-
-        @Override
-        public void getArea(int area) {
-
-        }
-
-        @Override
-        public void getCenter(int centre) {
-
-        }
+    public void getName() {
+        System.out.println(nameRectangle);
     }
+
+    @Override
+    public void setShape(int x1, int x2, int y1, int y2) {
+        x1 = x1Rec;
+        x2 = x2Rec;
+        y1 = y1Rec;
+        y2 = x1Rec;
+    }
+}
 
