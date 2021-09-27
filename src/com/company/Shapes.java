@@ -1,41 +1,23 @@
 package com.company;
 
-public abstract class Shapes {
-    public abstract void  makeShape(int x, int y);
-    public abstract void  showShape();
-    public abstract void  calculateShapeArea();
-    public abstract void  calculateShapeCirc();
-    public abstract void  getCenter();
-    boolean collision = false;
+public abstract class Shapes { //All shapes have to contain following methods
+    int x1;
+    int x2;
+    int y1;
+    int y2;
+    int centre;
+    int area;
+
+    String name;
+
+    public abstract String setName(String name);
+    public abstract void getName(String name);
+    public abstract void  setShape(int x1, int x2, int y1, int y2);
+    public abstract void getShape(int x1, int x2, int y1, int y2);
+    public abstract void  calculateShapeArea(String name);
+    public abstract void  calculateShapeCircimfurence(String name);
+    public abstract void  getArea(int area);
+    public abstract void  getCenter(int centre);
+
 }
 
-class Rectangle extends Shapes{
-    int a;
-    int b;
-
-    @Override
-    public void makeShape(int x, int y) {
-        this.a = x;
-        this.b = y;
-    }
-
-    @Override
-    public void showShape() {
-        System.out.println("Rectangle coordinates is X="+a+" Y="+b);
-    }
-
-    @Override
-    public void calculateShapeArea() {
-
-    }
-
-    @Override
-    public void calculateShapeCirc() {
-
-    }
-
-    @Override
-    public void getCenter() {
-
-    }
-}
