@@ -39,8 +39,6 @@ public class Triangle extends Shapes {
                 " Point A(bottom Right) = (" + bottomRightX + ", " + bottomRightY + ")" +
                 " Point bB(bottom Left) = (" + bottomLeftX + ", " + bottomLeftY + ")" +
                 " C(top) = (" + topX + ", " + topY + ")};");
-
-
     }
 
     @Override
