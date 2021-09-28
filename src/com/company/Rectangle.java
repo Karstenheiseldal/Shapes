@@ -1,7 +1,7 @@
 package com.company;
 
 public class Rectangle extends Shapes {
-    int bottomRightX;
+    int bottomRightX; //int x and y coordinates for each point
     int bottomRightY;
     int bottomLeftX;
     int bottomLeftY;
@@ -10,25 +10,20 @@ public class Rectangle extends Shapes {
     int topRightX;
     int topRightY;
 
-    int length;
-    int width;
-    int areal;
 
-    String nameRectangle;
+    String nameRectangle;  //rectangle can be represented as a String
 
-    boolean validShape =false;
-
-    @Override
+    @Override              //method to give the rectangle the values
     public void setName(String name) {
         nameRectangle = name;
     }
 
-    @Override
+    @Override               //method to print out the name in the terminal
     public void getName() {
         System.out.println(nameRectangle);
     }
 
-    @Override
+    @Override               //method to give the x and y coordinates for the Rectangle
     public void createShape() {
 
         bottomRightX = 5;
@@ -41,7 +36,7 @@ public class Rectangle extends Shapes {
         topRightY = 9;
     }
 
-    @Override
+    @Override               //method to print out the rectangle coordinates to the terminal
     public void getShape() {
         System.out.println("Rectangle ABCD has the following coordinates. " +
                 " A(bottom Right) = ("+bottomRightX+", "+bottomRightY+")"+
@@ -51,9 +46,15 @@ public class Rectangle extends Shapes {
     }
 
     @Override
-    public void calculateShapeArea() {
+    public void calculateShapeArea() { //method to calculate the shape Area
+        int length = bottomRightX - bottomLeftX; //finding and printing length with x coordinates
+        System.out.println("the rectangle "+this.nameRectangle+" length: "+length);
+        int width = topRightY - bottomRightY; //finding printing width with y koordinates
+        System.out.println("the rectangle "+this.nameRectangle+" width: "+width);
 
+        int area = length*width;      //final calculation
 
+        System.out.println(area + " is the area for the rectangle "+this.nameRectangle);
 
     }
 
