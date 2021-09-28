@@ -9,6 +9,5 @@ public class Main {
         rec.getName();
         rec.createShape();
         rec.getShape();
-        rec.validateShape();
     }
 }

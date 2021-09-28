@@ -34,30 +34,20 @@ public class Rectangle extends Shapes {
         bottomRightX = 5;
         bottomRightY = 7;
         bottomLeftX = 2;
-        bottomLeftY = 9;
-        topLeftX = 5;
+        bottomLeftY = 7;
+        topLeftX = 2;
         topLeftY = 9;
-        topRightX = 2;
-        topRightY = 7;
-    }
-
-    @Override
-    public void validateShape(){
-        if(this.bottomRightX == this.topRightX && this.bottomRightY == this.topRightY){
-            System.out.println("Nice");
-        } else {
-            System.out.println("yo");
-
-        }
+        topRightX =5;
+        topRightY = 9;
     }
 
     @Override
     public void getShape() {
         System.out.println("Rectangle ABCD has the following coordinates. " +
-                " A=("+bottomRightX+", "+bottomRightY+")"+
-                " B=("+bottomLeftX+", "+bottomLeftY+")"+
-                " C=("+topLeftX+", "+topLeftY+")"+
-                " D=("+topRightX+", "+topRightY+")");
+                " A(bottom Right) = ("+bottomRightX+", "+bottomRightY+")"+
+                " B(bottom Left) = ("+bottomLeftX+", "+bottomLeftY+")"+
+                " C(top Left) = ("+topLeftX+", "+topLeftY+")"+
+                " D(top Right) = ("+topRightX+", "+topRightY+")");
     }
 
     @Override
