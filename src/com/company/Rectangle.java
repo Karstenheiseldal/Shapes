@@ -29,16 +29,16 @@ public class Rectangle extends Shapes {
     }
 
     @Override
-    public void setShape(int ax, int ay, int bx, int by, int cx, int cy, int dx, int dy) {
+    public void createShape() {
 
-            axRec = ax;
-            ayRec = ay;
-            bxRec = bx;
-            byRec = by;
-            cxRec = cx;
-            cyRec = cy;
-            dxRec = dx;
-            dyRec = dy;
+            axRec = 5;
+            ayRec = 7;
+            bxRec = 2;
+            byRec = 9;
+            cxRec = 5;
+            cyRec = 9;
+            dxRec = 2;
+            dyRec = 7;
     }
 
     @Override
