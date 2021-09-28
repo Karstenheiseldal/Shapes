@@ -10,6 +10,8 @@ public class Main {
         rec.createShape(); //sets the coordinates for the Triangle
         rec.getShape();
         rec.calculateShapeArea();
+        rec.calculateShapeCircimfurence();
+        rec.getCenter();
 
         System.out.println();
         System.out.println();
@@ -20,5 +22,6 @@ public class Main {
         tri.createShape(); //sets the coordinates for the triangle
         tri.getShape(); //prints triangle koordinates (ABC)
         tri.calculateShapeArea();
+        tri.calculateShapeCircimfurence();
     }
 }

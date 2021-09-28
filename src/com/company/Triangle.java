@@ -1,6 +1,5 @@
 package com.company;
-
-import org.w3c.dom.ls.LSOutput;
+import java.lang.Math;
 
 public class Triangle extends Shapes {
     int bottomRightX; //triangle points ACD x and y coordinates.
@@ -35,10 +34,10 @@ public class Triangle extends Shapes {
 
     @Override //method to reveal its coordinates as well
     public void getShape() {
-        System.out.println("Triangle ABC has the following coordinates. "+
+        System.out.println("Triangle has the following coordinates. "+
                 " Point A(bottom Right) = (" + bottomRightX + ", " + bottomRightY + ")" +
-                " Point bB(bottom Left) = (" + bottomLeftX + ", " + bottomLeftY + ")" +
-                " C(top) = (" + topX + ", " + topY + ")};");
+                " Point B(bottom Left) = (" + bottomLeftX + ", " + bottomLeftY + ")" +
+                " Point C(top) = (" + topX + ", " + topY + ")};");
     }
 
     @Override
@@ -50,8 +49,31 @@ public class Triangle extends Shapes {
         }
         System.out.println("Triangle "+this.nameTriangle+" has an area of "+area);
 
+    }
 
+    @Override
+    public void calculateShapeCircimfurence() { //d=sq(x2-x1)2+(y2-y1)2
+        int distanceAb = (bottomLeftX-bottomRightX)*(bottomLeftX-bottomRightX)+(bottomLeftY-bottomRightY)*(bottomLeftY-bottomRightY);
+        int distanceBc = (topX - bottomRightX)*(topX - bottomRightX)+(topY-bottomLeftY)*(topY-bottomLeftY);
+        int distanceCa = (bottomRightX - topX)*(bottomRightX - topX)+(bottomRightY-topY);
+
+
+        double sideAB = Math.sqrt(distanceAb);
+        double sideBC = Math.sqrt(distanceBc);
+        double sideCA = Math.sqrt(distanceCa);
+        double perimeter = sideAB + sideBC + sideCA;
+
+        System.out.println("side AB: "+sideAB);
+        System.out.println("side BC: "+sideBC);
+        System.out.println("side CA: "+sideCA);
+        System.out.println("Perimeter: "+perimeter);
+    }
+
+    @Override
+    public void getCenter() {
 
     }
+
+
 }
 

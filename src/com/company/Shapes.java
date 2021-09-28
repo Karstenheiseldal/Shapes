@@ -8,11 +8,8 @@ public abstract class Shapes { //All shapes have to contain following methods
     public abstract void createShape(); //giving coordinates to the objects
     public abstract void getShape(); //a method for revealing the coordinates has to be applied
     public abstract void  calculateShapeArea();
-    /*public abstract void  calculateShapeCircimfurence(String name);
-    public abstract void  getArea(int area);
-    public abstract void  getCenter(int centre)/*
-
-     */
+    public abstract void  calculateShapeCircimfurence();
+    public abstract void  getCenter();
 
 }
 

@@ -11,9 +11,10 @@ public class Rectangle extends Shapes {
     int topRightY;
 
 
+
     String nameRectangle;  //rectangle can be represented as a String
 
-    @Override              //method to give the rectangle the values
+    @Override              //method to give the rectangle String value
     public void setName(String name) {
         nameRectangle = name;
     }
@@ -47,15 +48,30 @@ public class Rectangle extends Shapes {
 
     @Override
     public void calculateShapeArea() { //method to calculate the shape Area
-        int length = bottomRightX - bottomLeftX; //finding and printing length with x coordinates
-        System.out.println("the rectangle "+this.nameRectangle+" length: "+length);
-        int width = topRightY - bottomRightY; //finding printing width with y koordinates
+        int length = bottomRightX - bottomLeftX;
+        int width =  topRightY - bottomRightY;
+
+        System.out.println("the rectangle "+this.nameRectangle+" length: "+length);  //printing length
         System.out.println("the rectangle "+this.nameRectangle+" width: "+width);
 
         int area = length*width;      //final calculation
+        System.out.println("Area is: "+area);
 
-        System.out.println(area + " is the area for the rectangle "+this.nameRectangle);
+    }
 
+    @Override
+    public void calculateShapeCircimfurence() {
+        int length = bottomRightX - bottomLeftX;
+        int width =  topRightY - bottomRightY;
+        int perimeter = (length*2)+(width*2);
+        System.out.println("Perimeter is: "+ perimeter);
+    }
+
+    @Override
+    public void getCenter() {
+        int centreX = (topLeftX+bottomRightX)/2; //(x,y) = (x2 + x1)/2, (y2+y1)/2
+        int centreY = (topLeftY+bottomRightY)/2;
+        System.out.println("Centre is located at ("+centreX+", "+centreY+")");
     }
 
 
