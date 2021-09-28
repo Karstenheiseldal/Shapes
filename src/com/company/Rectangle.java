@@ -38,6 +38,7 @@ public class Rectangle extends Shapes {
             cxRec = cx;
             cyRec = cy;
             dxRec = dx;
+            dyRec = dy;
     }
 
     @Override
