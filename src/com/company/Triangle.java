@@ -57,6 +57,7 @@ public class Triangle extends Shapes {
         System.out.println("Perimeter: "+perimeter);
     }
 
+    @SuppressWarnings("IntegerDivisionInFloatingPointContext")
     @Override
     public void getCenter() { //Cx = (Ax + BX + CX)/3, Cy = (Ay + By + Cy)
         double centreX = (bottomRightX + bottomLeftX + topX)/3;

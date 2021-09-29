@@ -9,9 +9,9 @@ public class Main {
         rec.getName();                    //print out the rectangle name
         rec.createShape();                //sets the coordinates for the rectangle, and prints it after.
         rec.getShape();
-        rec.calculateShapeArea();         //calculates and returns rectangle area, circumference and centre.
+        rec.calculateShapeArea();         //calculate and print rectangle area, circumference and centre.
         rec.calculateShapeCircumference();
-        rec.getCenter();                  //prints centre X and Y coordinates for the rectangle
+        rec.getCenter();
         rec.moveShape(4,5); //move shape to inserted x and y coordinates
         rec.getCenter();                 //to prove that the object has now been moved by printing centre again
 
