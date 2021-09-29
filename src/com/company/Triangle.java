@@ -70,7 +70,7 @@ public class Triangle extends Shapes {
     }
 
     @Override
-    public void getCenter() {
+    public void getCenter() { //Cx = (Ax + BX + CX)/3, Cy = (Ay +
 
     }
 
