@@ -35,5 +35,6 @@ public class Main {
         cir.getShape();
         cir.calculateShapeArea();
         cir.calculateShapeCircimfurence();
+        cir.getCenter();
     }
 }

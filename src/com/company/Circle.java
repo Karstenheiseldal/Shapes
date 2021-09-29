@@ -52,7 +52,7 @@ public class Circle extends Shapes {
 
     @Override
     public void getCenter() {
-        System.out.println("Centre: "+centreX +", "+centreY+")");
+        System.out.println("Centre: ("+centreX +", "+centreY+")");
     }
 
 }

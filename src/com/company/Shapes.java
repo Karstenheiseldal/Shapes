@@ -10,6 +10,7 @@ public abstract class Shapes { //All shapes have to contain following methods
     public abstract void  calculateShapeArea();
     public abstract void  calculateShapeCircimfurence();
     public abstract void  getCenter();
+    public abstract void moveShape(int, int);
 
 }
 

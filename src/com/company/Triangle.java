@@ -53,14 +53,14 @@ public class Triangle extends Shapes {
 
     @Override
     public void calculateShapeCircimfurence() { //d=sq(x2-x1)2+(y2-y1)2
-        int distanceAb = (bottomLeftX-bottomRightX)*(bottomLeftX-bottomRightX)+(bottomLeftY-bottomRightY)*(bottomLeftY-bottomRightY);
-        int distanceBc = (topX - bottomRightX)*(topX - bottomRightX)+(topY-bottomLeftY)*(topY-bottomLeftY);
-        int distanceCa = (bottomRightX - topX)*(bottomRightX - topX)+(bottomRightY-topY);
+        int unSquaredAB = (bottomLeftX-bottomRightX)*(bottomLeftX-bottomRightX)+(bottomLeftY-bottomRightY)*(bottomLeftY-bottomRightY);
+        int unSquaredBC = (topX - bottomRightX)*(topX - bottomRightX)+(topY-bottomLeftY)*(topY-bottomLeftY);
+        int unSquaredCA = (bottomRightX - topX)*(bottomRightX - topX)+(bottomRightY-topY);
 
 
-        double sideAB = Math.sqrt(distanceAb);
-        double sideBC = Math.sqrt(distanceBc);
-        double sideCA = Math.sqrt(distanceCa);
+        double sideAB = Math.sqrt(unSquaredAB);
+        double sideBC = Math.sqrt(unSquaredBC);
+        double sideCA = Math.sqrt(unSquaredCA);
         double perimeter = sideAB + sideBC + sideCA;
 
         System.out.println("side AB: "+sideAB);
@@ -70,8 +70,10 @@ public class Triangle extends Shapes {
     }
 
     @Override
-    public void getCenter() { //Cx = (Ax + BX + CX)/3, Cy = (Ay +
-
+    public void getCenter() { //Cx = (Ax + BX + CX)/3, Cy = (Ay + By + Cy)
+        double centreX = (bottomRightX + bottomLeftX + topX)/3;
+        double centreY = (bottomRightY + bottomLeftY + topY)/3;
+        System.out.println("Centre: ("+centreX+", "+centreY+")");
     }
 
 

@@ -74,6 +74,11 @@ public class Rectangle extends Shapes {
         System.out.println("Centre is located at ("+centreX+", "+centreY+")");
     }
 
+    @Override
+    public void moveShape(int moveX, int moveY) {
+
+    }
+
 
 }
 
