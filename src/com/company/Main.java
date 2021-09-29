@@ -12,9 +12,9 @@ public class Main {
         rec.calculateShapeArea();         //calculate and print rectangle area, circumference and centre.
         rec.calculateShapeCircumference();
         rec.getCenter();
-        rec.moveShape(4,5); //move shape to inserted x and y coordinates
+        rec.moveShape(1,1); //move shape to inserted x and y coordinates
         rec.getCenter();                 //to prove that the object has now been moved by printing centre again
-
+        rec.pointGame(9,9);
         System.out.println();
         System.out.println();
 
@@ -31,8 +31,6 @@ public class Main {
 
         System.out.println();
         System.out.println();
-
-        rec.getName();
 
         Circle cir = new Circle(); //new circle object
         cir.setName("Ole");        //name the circle

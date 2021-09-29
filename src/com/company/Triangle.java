@@ -81,4 +81,8 @@ public class Triangle extends Shapes {
                 " Point C(top) = (" + topX + ", " + topY + ")};");
     }
 
+    public void pointGame(int userPointX, int userpointY){
+
+    }
+
     }

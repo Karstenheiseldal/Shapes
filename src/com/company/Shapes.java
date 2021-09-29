@@ -1,6 +1,8 @@
 package com.company;
 
 public abstract class Shapes {              //All shapes have to contain following methods
+    int pX;
+    int pY;
     String name;
     public void setName(String nameShape){
         name=nameShape;

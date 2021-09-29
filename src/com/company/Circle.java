@@ -3,9 +3,8 @@ package com.company;
 public class Circle extends Shapes {
     int centreX;
     int centreY;
-    int radius;
+    double radius;
     double area;
-    double circumference;
 
     @Override //method to give the rectangle its coordinates as seen in the parent abstract class
     public void createShape() {
@@ -34,7 +33,7 @@ public class Circle extends Shapes {
 
     @Override
     public void calculateShapeCircumference() { //2piR
-        circumference = (2*3.14)*radius;
+        double circumference = (2*3.14)*radius;
         System.out.println("Circumference is: " + circumference );
     }
 
