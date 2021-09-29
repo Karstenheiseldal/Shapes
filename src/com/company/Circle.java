@@ -55,4 +55,9 @@ public class Circle extends Shapes {
         System.out.println("Centre: ("+centreX +", "+centreY+")");
     }
 
+    @Override
+    public void moveShape(int moveX, int moveY) {
+
+    }
+
 }

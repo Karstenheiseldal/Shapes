@@ -76,6 +76,20 @@ public class Triangle extends Shapes {
         System.out.println("Centre: ("+centreX+", "+centreY+")");
     }
 
+    @Override
+    public void moveShape(int moveX, int moveY) {
+        bottomRightX+=moveX; //adding move x and y to the x and y coordinates of the triangle points
+        bottomLeftX+=moveX;
+        topX+=moveX;
 
-}
+        bottomRightY+=moveY;
+        bottomLeftY+=moveY;
+        topY+=moveY;
 
+        System.out.println("Triangle has been moved to following coordinates. "+
+                " Point A(bottom Right) = (" + bottomRightX + ", " + bottomRightY + ")" +
+                " Point B(bottom Left) = (" + bottomLeftX + ", " + bottomLeftY + ")" +
+                " Point C(top) = (" + topX + ", " + topY + ")};");
+    }
+
+    }

@@ -76,7 +76,21 @@ public class Rectangle extends Shapes {
 
     @Override
     public void moveShape(int moveX, int moveY) {
+        bottomRightX+=moveX;
+        bottomLeftX+=moveX;
+        topRightX+=moveX;
+        topLeftX+=moveX;
 
+        bottomRightY+=moveY;
+        bottomLeftY+=moveY;
+        topRightY+=moveY;
+        topLeftY+=moveY;
+
+        System.out.println("Rectangle ABCD has been moved to following coordinates. " +
+                " A(bottom Right) = ("+bottomRightX+", "+bottomRightY+")"+
+                " B(bottom Left) = ("+bottomLeftX+", "+bottomLeftY+")"+
+                " C(top Left) = ("+topLeftX+", "+topLeftY+")"+
+                " D(top Right) = ("+topRightX+", "+topRightY+")");
     }
 
 
