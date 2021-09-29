@@ -57,6 +57,11 @@ public class Circle extends Shapes {
 
     @Override
     public void moveShape(int moveX, int moveY) {
+        centreX+=moveX;
+        centreY+=moveY;
+
+        System.out.println("Circle "+this.nameCircle+ " has been moved following coordinates. "+
+                " Point centre = (" + centreX+ ", " + centreY + ")" + " Radius = "+radius);
 
     }
 

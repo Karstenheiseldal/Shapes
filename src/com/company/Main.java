@@ -11,7 +11,7 @@ public class Main {
         rec.getShape();
         rec.calculateShapeArea(); //calculates and returns rectangle area, circumference and centre.
         rec.calculateShapeCircimfurence();
-        rec.getCenter();
+        rec.getCenter(); //prints centre X and Y coordinates for the rectangle
         rec.moveShape(4,5); //move shape to inserted x and y coordinates
         rec.getCenter(); //to confirm that the object has now been moved by printing centre again
 
@@ -23,9 +23,9 @@ public class Main {
         tri.getName(); //print out triangle name
         tri.createShape(); //sets the coordinates for the triangle
         tri.getShape(); //prints triangle coordinates (ABC)
-        tri.calculateShapeArea();
+        tri.calculateShapeArea(); //calculating area and circumference
         tri.calculateShapeCircimfurence();
-        tri.getCenter();
+        tri.getCenter(); //prints centre coordinates for the triangle
         tri.moveShape(2,4);
 
         System.out.println();
@@ -39,5 +39,6 @@ public class Main {
         cir.calculateShapeArea();
         cir.calculateShapeCircimfurence();
         cir.getCenter();
+        cir.moveShape(1,5);
     }
 }
