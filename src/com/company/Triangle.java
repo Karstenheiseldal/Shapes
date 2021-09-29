@@ -9,18 +9,6 @@ public class Triangle extends Shapes {
     int topX;
     int topY;
 
-    String nameTriangle; //triangle can be set with a name
-
-    @Override //method for naming the triangle
-    public void setName(String name) {
-        nameTriangle = name;
-    }
-
-    @Override //method to get printed in the terminal.
-    public void getName() {
-        System.out.println(nameTriangle);
-    }
-
     @Override //method to give the rectangle its coordinates as seen in the parent abstract class
     public void createShape() {
 
@@ -47,12 +35,12 @@ public class Triangle extends Shapes {
         if(area <0){
             area=area*(-1);
         }
-        System.out.println("Triangle "+this.nameTriangle+" has an area of "+area);
+        System.out.println("Triangle "+this.name+" has an area of "+area);
 
     }
 
     @Override
-    public void calculateShapeCircimfurence() { //d=sq(x2-x1)2+(y2-y1)2
+    public void calculateShapeCircumference() { //d=sq(x2-x1)2+(y2-y1)2
         int unSquaredAB = (bottomLeftX-bottomRightX)*(bottomLeftX-bottomRightX)+(bottomLeftY-bottomRightY)*(bottomLeftY-bottomRightY);
         int unSquaredBC = (topX - bottomRightX)*(topX - bottomRightX)+(topY-bottomLeftY)*(topY-bottomLeftY);
         int unSquaredCA = (bottomRightX - topX)*(bottomRightX - topX)+(bottomRightY-topY);

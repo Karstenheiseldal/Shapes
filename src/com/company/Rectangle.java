@@ -10,20 +10,6 @@ public class Rectangle extends Shapes {
     int topRightX;
     int topRightY;
 
-
-
-    String nameRectangle;  //rectangle can be represented as a String
-
-    @Override              //method to give the rectangle String value
-    public void setName(String name) {
-        nameRectangle = name;
-    }
-
-    @Override               //method to print out the name in the terminal
-    public void getName() {
-        System.out.println(nameRectangle);
-    }
-
     @Override               //method to give the x and y coordinates for the Rectangle
     public void createShape() {
 
@@ -51,8 +37,8 @@ public class Rectangle extends Shapes {
         int length = bottomRightX - bottomLeftX;
         int width =  topRightY - bottomRightY;
 
-        System.out.println("the rectangle "+this.nameRectangle+" length: "+length);  //printing length
-        System.out.println("the rectangle "+this.nameRectangle+" width: "+width);
+        System.out.println("the rectangle "+this.name+" length: "+length);  //printing length
+        System.out.println("the rectangle "+this.name+" width: "+width);
 
         int area = length*width;      //final calculation
         System.out.println("Area is: "+area);
@@ -60,7 +46,7 @@ public class Rectangle extends Shapes {
     }
 
     @Override
-    public void calculateShapeCircimfurence() {
+    public void calculateShapeCircumference() {
         int length = bottomRightX - bottomLeftX;
         int width =  topRightY - bottomRightY;
         int perimeter = (length*2)+(width*2);

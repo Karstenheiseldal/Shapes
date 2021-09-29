@@ -7,18 +7,6 @@ public class Circle extends Shapes {
     double area;
     double circumference;
 
- String nameCircle;
-
-    @Override //method for naming the triangle
-    public void setName(String name){
-        nameCircle = name;
-    }
-
-    @Override //method to get printed in the terminal.
-    public void getName() {
-        System.out.println(nameCircle);
-    }
-
     @Override //method to give the rectangle its coordinates as seen in the parent abstract class
     public void createShape() {
 
@@ -45,7 +33,7 @@ public class Circle extends Shapes {
     }
 
     @Override
-    public void calculateShapeCircimfurence() { //2piR
+    public void calculateShapeCircumference() { //2piR
         circumference = (2*3.14)*radius;
         System.out.println("Circumference is: " + circumference );
     }
@@ -60,8 +48,8 @@ public class Circle extends Shapes {
         centreX+=moveX;
         centreY+=moveY;
 
-        System.out.println("Circle "+this.nameCircle+ " has been moved following coordinates. "+
-                " Point centre = (" + centreX+ ", " + centreY + ")" + " Radius = "+radius);
+        System.out.println("Circle "+this.name+ " has been moved following coordinates. "+
+                " Point centre = (" + centreX+ ", " + centreY + ")");
 
     }
 
