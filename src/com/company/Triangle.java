@@ -10,8 +10,9 @@ public class Triangle extends Shapes {
     double topX;
     double topY;
     double area;
-    public double centreY;
     public double centreX;
+    public double centreY;
+
 
     @Override
     public void createShape() { //gives the attributes values
@@ -96,9 +97,7 @@ public class Triangle extends Shapes {
         double BCP = Math.abs(((bX * (cY - pY)) + (cX * (pY - bY)) + (pX * (bY - cY)))/2);
         double CAP = Math.abs(((cX * (aY - pY)) + (aX * (pY - cY)) + (pX * (cY - aY)))/2);
 
-        if(this.area == ABP+BCP+CAP){
-            out.println("Point is inside triangle");
-        }
+        if(ABP + BCP + CAP == this.area) out.println("Point is inside triangle");
 
         else{
             out.println("Point is outside triangle");
