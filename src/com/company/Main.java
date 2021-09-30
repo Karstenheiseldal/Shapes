@@ -12,9 +12,9 @@ public class Main {
         rec.calculateShapeArea();         //calculate and print rectangle area, circumference and centre.
         rec.calculateShapeCircumference();
         rec.getCenter();
-        rec.moveShape(1,1); //move shape to inserted x and y coordinates
+        //rec.moveShape(1,1); //move shape to inserted x and y coordinates
         rec.getCenter();                 //to prove that the object has now been moved by printing centre again
-        rec.pointGame(9,9);
+        rec.pointGame(5,7);         //insert points of interest to check if point is inside or outside the Rectangle
         System.out.println();
         System.out.println();
 
@@ -27,8 +27,8 @@ public class Main {
         tri.calculateShapeArea();           //calculating area and circumference
         tri.calculateShapeCircumference();
         tri.getCenter();                    //prints centre coordinates for the triangle
-        tri.moveShape(2,4);   //moves the triangles collective x and y coordinates
-
+        //tri.moveShape(2,4);               //moves the triangles collective x and y coordinates
+        tri.pointGame(4,7);
         System.out.println();
         System.out.println();
 

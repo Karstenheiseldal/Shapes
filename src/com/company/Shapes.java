@@ -1,6 +1,6 @@
 package com.company;
 
-public abstract class Shapes {              //All shapes have to contain following methods
+public abstract class Shapes {
     int pX;
     int pY;
     String name;
@@ -11,6 +11,7 @@ public abstract class Shapes {              //All shapes have to contain followi
         System.out.println(name);
     }
     //the program should be able to print out the name as well.
+    //All shapes have to contain following methods
     public abstract void createShape();     //giving coordinates to the objects
     public abstract void getShape();        //a method for revealing the coordinates has to be applied
     public abstract void calculateShapeArea(); //all subclasses should be able to calculate the shape area and circumference and centre.

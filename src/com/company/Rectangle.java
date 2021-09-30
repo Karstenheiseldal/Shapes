@@ -49,7 +49,7 @@ public class Rectangle extends Shapes {
     public void calculateShapeCircumference() {
         int length = bottomRightX - bottomLeftX;
         int width = topRightY - bottomRightY;
-        int perimeter = (length * 2) + (width * 2);
+        int perimeter = (length * 2) + (width * 2); //2a + 2b
         System.out.println("Perimeter is: " + perimeter);
     }
 
@@ -81,29 +81,30 @@ public class Rectangle extends Shapes {
 
     public void pointGame(int X, int Y) { //
 
-        int aX = bottomRightX;
-        int aY = bottomRightY;
-        int bX = bottomLeftX;
-        int bY = bottomLeftY;
-        int cX = topLeftX;
-        int cY = topLeftY;
-        int dX = topRightX;
-        int dY = topRightY;
+        double aX = bottomRightX;
+        double aY = bottomRightY;
+        double bX = bottomLeftX;
+        double bY = bottomLeftY;
+        double cX = topLeftX;
+        double cY = topLeftY;
+        double dX = topRightX;
+        double dY = topRightY;
         pX = X;
         pY = Y;
         //pX, py, aX, aY, bX, bY, cX, cY, dX, dY
-        //ABP = 0.5 * abs(xA*(yB - yP) + xB*(yP - yA) + xP*(yA - yB))
 
-        double ABP = (Math.abs((aX * (bY - pY)) + (bX * (pY - aY)) + (pX * (aY - bY))/2));
-        double BCP = (Math.abs((bX * (cY - pY)) + (cX * (pY - bY)) + (pX * (bY - cY))/2));
-        double CDP = (Math.abs((cX * (dY - pY)) + (dX * (pY - bY)) + (pX * (cY - dY))/2));
-        double DAP = (Math.abs((dX * (aY - pY)) + (aX * (pY - dY)) + (pX * (dY - aY))/2));
+        double ABP = Math.abs(((aX * (bY - pY)) + (bX * (pY - aY)) + (pX * (aY - bY)))/2);
+        double BCP = Math.abs(((bX * (cY - pY)) + (cX * (pY - bY)) + (pX * (bY - cY)))/2);
+        double CDP = Math.abs(((cX * (dY - pY)) + (dX * (pY - cY)) + (pX * (cY - dY)))/2);
+        double DAP = Math.abs(((dX * (aY - pY)) + (aX * (pY - dY)) + (pX * (dY - aY)))/2);
 
         System.out.println(ABP);
+        System.out.println(BCP);
         System.out.println(ABP + BCP + CDP + DAP);
 
-        if (this.area == ABP + BCP + CDP + DAP) {
+        if (this.area == ABP + BCP + CDP + DAP){
             System.out.println(area + " it is in the rectangle");
+
         } else {
             System.out.println("The point ("+pX+", "+pY+")"+"is outside the rectangle");
 
