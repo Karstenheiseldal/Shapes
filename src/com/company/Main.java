@@ -3,7 +3,7 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-                                             //program start
+
         Rectangle rec = new Rectangle();  //new rectangle object
         rec.setName("Oliver");            //give the rectangle a name
         rec.createShape();                //sets the coordinates for the rectangle, and prints it after.
@@ -13,7 +13,7 @@ public class Main {
         rec.getCenter();
         rec.moveShape(1,1); //move shape to inserted x and y coordinates
         rec.getCenter();                 //to prove that the object has now been moved by printing centre again
-        rec.pointGame(5,7);        //insert points of interest to check if point is inside or outside the Rectangle
+        rec.pointGame(6,8);        //insert points of interest to check if point is inside or outside the Rectangle
 
         System.out.println();
         System.out.println();
@@ -33,21 +33,17 @@ public class Main {
 
         Circle cir = new Circle(); //new circle object
         cir.setName("Ole");        //name the circle
-        //cir.getName();             //print name
         cir.createShape();         //sets centre x and y coordinates and radius
         cir.getShape();            //prints the coordinates
         cir.calculateShapeArea();  //calculates the area of the circle
         cir.calculateShapeCircumference(); //calculates and prints the circle circumference
         cir.getCenter();                    //prints the centre for the circle
-        cir.moveShape(1,5);    //moves the circle's centre to given X and Y
+        //cir.moveShape(1,5);    //moves the circle's centre to given X and Y
         cir.pointGame(11,10);          //insert point of choosing, it checks if it is inside or outside the circle
 
         System.out.println();
 
         cir.euclideanDistance(cir.centreX,tri.centreX,cir.centreY,tri.centreY); //Insert point Ax, Bx, Ay, By, to dins euclidean
-        //finding and printing the center between the circle triangle and the circle
-
-
-
+        //finding and printing the center between objectA and objectB.
     }
-    }
+}

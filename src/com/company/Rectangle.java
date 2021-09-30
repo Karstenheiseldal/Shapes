@@ -10,9 +10,12 @@ public class Rectangle extends Shapes {
     double topRightX;
     double topRightY;
     double area;
+    double perimeter;
+    double centreX;
+    double centreY;
 
-    @Override               //method to applying the x and y coordinates for the Rectangle. Override becasuse of Abstract.
-    public void createShape() {
+    @Override
+    public void createShape() {  //applying the x and y coordinates for the Rectangle.
         bottomRightX = 5;
         bottomRightY = 7;
         bottomLeftX = 2;
@@ -24,7 +27,7 @@ public class Rectangle extends Shapes {
     }
 
     @Override
-    public void getShape() { //method to prdouble out the rectangle coordinates to the terminal
+    public void getShape() { //method to printle out the rectangle coordinates to the terminal
         System.out.println("Rectangle ABCD has the following coordinates. " +
                 " A(bottom Right) = (" + bottomRightX + ", " + bottomRightY + ")" +
                 " B(bottom Left) = (" + bottomLeftX + ", " + bottomLeftY + ")" +
@@ -40,22 +43,22 @@ public class Rectangle extends Shapes {
         System.out.println("the rectangle " + this.name + " length: " + length);  //prdoubleing length
         System.out.println("the rectangle " + this.name + " width: " + width);
 
-        area = length * width;      //final calculation
+        area = length * width;      //Area calculation
         System.out.println("Area is: " + area);
     }
 
     @Override
-    public void calculateShapeCircumference() {
+    public void calculateShapeCircumference() { // formula: p = 2a + 2b
         double length = bottomRightX - bottomLeftX;
         double width = topRightY - bottomRightY;
-        double perimeter = (length * 2) + (width * 2); // formula: p = 2a + 2b
+        perimeter = (length * 2) + (width * 2);
         System.out.println("Perimeter is: " + perimeter);
     }
 
     @Override
     public void getCenter() {
-        double centreX = (topLeftX + bottomRightX) / 2; //(x,y) = (x2 + x1)/2, (y2+y1)/2
-        double centreY = (topLeftY + bottomRightY) / 2;
+        centreX = (topLeftX + bottomRightX) / 2; //(x,y) = (x2 + x1)/2, (y2+y1)/2
+        centreY = (topLeftY + bottomRightY) / 2;
         System.out.println("Centre is located at (" + centreX + ", " + centreY + ")");
        
     }
@@ -79,8 +82,7 @@ public class Rectangle extends Shapes {
                 " D(top Right) = (" + topRightX + ", " + topRightY + ")");
     }
 
-    public void pointGame(double X, double Y) { //
-
+    public void pointGame(double X, double Y) {
         double aX = bottomRightX;
         double aY = bottomRightY;
         double bX = bottomLeftX;
@@ -92,8 +94,10 @@ public class Rectangle extends Shapes {
 
         pX = X;
         pY = Y;
+
         //Dividing the rectangel into 4 tringles. Tringle ABP, BCP, DPD and DAP.
-        //Finding the area of each triangle. It cannot be negative, so math.abs is used. Double because of division by 2.
+        //Finding the area of each triangle. It cannot be negative, it is an absolute number. Double because of division by 2.
+
         double ABP = Math.abs(((aX * (bY - pY)) + (bX * (pY - aY)) + (pX * (aY - bY)))/2);
         double BCP = Math.abs(((bX * (cY - pY)) + (cX * (pY - bY)) + (pX * (bY - cY)))/2);
         double CDP = Math.abs(((cX * (dY - pY)) + (dX * (pY - cY)) + (pX * (cY - dY)))/2);
@@ -102,9 +106,9 @@ public class Rectangle extends Shapes {
         //if adding the area of the three triangles is the ecact same as the rectangle, it is in the rectangle.
         if (this.area == ABP + BCP + CDP + DAP){
             System.out.println(area + " it is in the rectangle");
-
-        } else {
-            System.out.println("The podouble ("+pX+", "+pY+")"+"is outside the rectangle");
+        }
+        else {
+            System.out.println("The point (" + pX + ", " + pY + ")" + "is outside the rectangle");
         }
     }
 }

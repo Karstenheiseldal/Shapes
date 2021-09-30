@@ -14,7 +14,6 @@ public class Triangle extends Shapes {
 
     @Override
     public void createShape() { //gives the attributes values
-
         bottomRightX = 10;
         bottomRightY = 7;
         bottomLeftX = 2;
@@ -24,7 +23,7 @@ public class Triangle extends Shapes {
     }
 
     @Override
-    public void getShape() { //method to print its coordinates as well
+    public void getShape() { //Prints the coordinates
         System.out.println("Triangle has the following coordinates. "+
                 " Point A(bottom Right) = (" + bottomRightX + ", " + bottomRightY + ")" +
                 " Point B(bottom Left) = (" + bottomLeftX + ", " + bottomLeftY + ")" +
@@ -43,44 +42,43 @@ public class Triangle extends Shapes {
     }
 
     @Override
-    public void calculateShapeCircumference() { //Distance formula d=sq(x2-x1)^2+(y2-y1)^2
-        double AB = Math.sqrt((bottomLeftX-bottomRightX)*(bottomLeftX-bottomRightX)+(bottomLeftY-bottomRightY)*(bottomLeftY-bottomRightY));
-        double BC = Math.sqrt((topX - bottomRightX)*(topX - bottomRightX)+(topY-bottomLeftY)*(topY-bottomLeftY));
-        double CA = Math.sqrt((bottomRightX - topX)*(bottomRightX - topX)+(bottomRightY-topY));
+    public void calculateShapeCircumference() { //Distance formula d = sq(x2-x1)^2+(y2-y1)
+        double AB = Math.sqrt((bottomLeftX - bottomRightX) * (bottomLeftX - bottomRightX) + (bottomLeftY - bottomRightY) * (bottomLeftY - bottomRightY));
+        double BC = Math.sqrt((topX - bottomRightX) * (topX - bottomRightX) + (topY-bottomLeftY) * (topY-bottomLeftY));
+        double CA = Math.sqrt((bottomRightX - topX) * (bottomRightX - topX) + (bottomRightY - topY));
 
+        double perimeter = AB + BC + CA; //Formula P = a + b + c
 
-        double perimeter = AB + BC + CA;
-
-        System.out.println("side AB: "+AB);
-        System.out.println("side BC: "+BC);
-        System.out.println("side CA: "+CA);
-        System.out.println("Perimeter: "+perimeter);
+        System.out.println("side AB: " + AB);
+        System.out.println("side BC: " + BC);
+        System.out.println("side CA: " + CA);
+        System.out.println("Perimeter: " + perimeter);
     }
 
     @Override
     public void getCenter() { //Cx = (Ax + BX + CX)/3, Cy = (Ay + By + Cy)
         centreX = (bottomRightX + bottomLeftX + topX)/3;
         centreY = (bottomRightY + bottomLeftY + topY)/3;
-        System.out.println("Centre: ("+centreX+", "+centreY+")");
+        System.out.println("Centre: (" + centreX + ", " + centreY + ")");
     }
 
     @Override
     public void moveShape(double moveX, double moveY) {
-        bottomRightX+=moveX; //adding move x and y to the x and y coordinates of the triangle points
-        bottomLeftX+=moveX;
-        topX+=moveX;
+        bottomRightX += moveX; //adding move x and y to the x and y coordinates of the triangle points
+        bottomLeftX += moveX;
+        topX += moveX;
 
-        bottomRightY+=moveY;
-        bottomLeftY+=moveY;
-        topY+=moveY;
+        bottomRightY += moveY;
+        bottomLeftY += moveY;
+        topY += moveY;
 
-        System.out.println("Triangle has been moved to following coordinates. "+
+        System.out.println("Triangle has been moved to following coordinates." +
                 " Point A(bottom Right) = (" + bottomRightX + ", " + bottomRightY + ")" +
                 " Point B(bottom Left) = (" + bottomLeftX + ", " + bottomLeftY + ")" +
                 " Point C(top) = (" + topX + ", " + topY + ")};");
     }
 
-    public void pointGame(double X, double Y){
+    public void pointGame(double X, double Y){ //checks if x and y points are inside the triangle
 
         double aX = bottomRightX;
         double aY = bottomRightY;
@@ -88,14 +86,15 @@ public class Triangle extends Shapes {
         double bY = bottomLeftY;
         double cX = topX;
         double cY = topY;
-        pX = X;
+
+        pX = X; //points coordinates
         pY = Y;
 
         double ABP = Math.abs(((aX * (bY - pY)) + (bX * (pY - aY)) + (pX * (aY - bY)))/2);
         double BCP = Math.abs(((bX * (cY - pY)) + (cX * (pY - bY)) + (pX * (bY - cY)))/2);
         double CAP = Math.abs(((cX * (aY - pY)) + (aX * (pY - cY)) + (pX * (cY - aY)))/2);
 
-        if(this.area==ABP+BCP+CAP){
+        if(this.area == ABP+BCP+CAP){
             System.out.println("Point is inside triangle");
         }
 
@@ -103,5 +102,4 @@ public class Triangle extends Shapes {
             System.out.println("Point is outside triangle");
         }
     }
-
-    }
+}
