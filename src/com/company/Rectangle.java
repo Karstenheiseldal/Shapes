@@ -48,7 +48,7 @@ public class Rectangle extends Shapes {
     public void calculateShapeCircumference() {
         double length = bottomRightX - bottomLeftX;
         double width = topRightY - bottomRightY;
-        double perimeter = (length * 2) + (width * 2); //2a + 2b
+        double perimeter = (length * 2) + (width * 2); // formula: p = 2a + 2b
         System.out.println("Perimeter is: " + perimeter);
     }
 
