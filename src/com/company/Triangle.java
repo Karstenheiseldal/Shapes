@@ -1,5 +1,6 @@
 package com.company;
 import java.lang.Math;
+import static java.lang.System.*;
 
 public class Triangle extends Shapes {
     double bottomRightX; //triangle points ABC x and y coordinates.
@@ -9,8 +10,8 @@ public class Triangle extends Shapes {
     double topX;
     double topY;
     double area;
-  public double centreY;
-  public double centreX;
+    public double centreY;
+    public double centreX;
 
     @Override
     public void createShape() { //gives the attributes values
@@ -24,7 +25,7 @@ public class Triangle extends Shapes {
 
     @Override
     public void getShape() { //Prints the coordinates
-        System.out.println("Triangle has the following coordinates. "+
+        out.println("Triangle has the following coordinates. "+
                 " Point A(bottom Right) = (" + bottomRightX + ", " + bottomRightY + ")" +
                 " Point B(bottom Left) = (" + bottomLeftX + ", " + bottomLeftY + ")" +
                 " Point C(top) = (" + topX + ", " + topY + ")};");
@@ -37,7 +38,7 @@ public class Triangle extends Shapes {
         if(area <0){
             area=area*(-1);
         }
-        System.out.println("Triangle "+this.name+" has an area of "+area);
+        out.println("Triangle "+this.name+" has an area of "+area);
 
     }
 
@@ -49,17 +50,17 @@ public class Triangle extends Shapes {
 
         double perimeter = AB + BC + CA; //Formula P = a + b + c
 
-        System.out.println("side AB: " + AB);
-        System.out.println("side BC: " + BC);
-        System.out.println("side CA: " + CA);
-        System.out.println("Perimeter: " + perimeter);
+        out.println("side AB: " + AB);
+        out.println("side BC: " + BC);
+        out.println("side CA: " + CA);
+        out.println("Perimeter: " + perimeter);
     }
 
     @Override
     public void getCenter() { //Cx = (Ax + BX + CX)/3, Cy = (Ay + By + Cy)
         centreX = (bottomRightX + bottomLeftX + topX)/3;
         centreY = (bottomRightY + bottomLeftY + topY)/3;
-        System.out.println("Centre: (" + centreX + ", " + centreY + ")");
+        out.println("Centre: (" + centreX + ", " + centreY + ")");
     }
 
     @Override
@@ -72,7 +73,7 @@ public class Triangle extends Shapes {
         bottomLeftY += moveY;
         topY += moveY;
 
-        System.out.println("Triangle has been moved to following coordinates." +
+        out.println("Triangle has been moved to following coordinates." +
                 " Point A(bottom Right) = (" + bottomRightX + ", " + bottomRightY + ")" +
                 " Point B(bottom Left) = (" + bottomLeftX + ", " + bottomLeftY + ")" +
                 " Point C(top) = (" + topX + ", " + topY + ")};");
@@ -87,7 +88,8 @@ public class Triangle extends Shapes {
         double cX = topX;
         double cY = topY;
 
-        pX = X; //points coordinates
+        //X and Y coordinates for the point.
+        pX = X;
         pY = Y;
 
         double ABP = Math.abs(((aX * (bY - pY)) + (bX * (pY - aY)) + (pX * (aY - bY)))/2);
@@ -95,11 +97,11 @@ public class Triangle extends Shapes {
         double CAP = Math.abs(((cX * (aY - pY)) + (aX * (pY - cY)) + (pX * (cY - aY)))/2);
 
         if(this.area == ABP+BCP+CAP){
-            System.out.println("Point is inside triangle");
+            out.println("Point is inside triangle");
         }
 
         else{
-            System.out.println("Point is outside triangle");
+            out.println("Point is outside triangle");
         }
     }
 }

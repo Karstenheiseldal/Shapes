@@ -1,12 +1,12 @@
 package com.company;
 
 public class Circle extends Shapes {
-    double centreX; //applied attributes
-    double centreY;
+    public double centreX; //attributes
+    public double centreY;
     double radius;
     double area;
 
-    @Override //method to give the rectangle its coordinates as seen in the parent abstract class
+    @Override //method to give the attributes its coordinates
     public void createShape() {
         centreX = 10;
         centreY = 5;
@@ -15,16 +15,13 @@ public class Circle extends Shapes {
 
     @Override //method to reveal its coordinates as well
     public void getShape() {
-        System.out.println("Circle has the following coordinates. " +
-                "Point centre = (" + centreX+ ", " + centreY + ")" + " Radius = " + radius);
+        System.out.println("Circle has the following coordinates. Point centre = (" + centreX + ", " + centreY + ")" + " Radius = " + radius);
     }
 
     @Override
     public void calculateShapeArea() { //calculates the circle area A=ax(bx-cy)+bx(cy-ay)+cx(ay-by) / 2
         area = (3.14 * (radius * radius));
-        if(area <0){
-            area=area * (-1);
-        }
+        if(area <0) area = area * (-1);
         System.out.println("Circle area: " + area);
     }
 
@@ -55,10 +52,7 @@ public class Circle extends Shapes {
         pY = Y;
 
         double distance = (pX - cX) * (pX - cX)*(pY - cY) * (pY - cY);
-
-            if (distance<=radius*radius){
-                System.out.println("Point is inside circle");
-            }
+            if (distance<=radius*radius) System.out.println("Point is inside circle");
             else{
                 System.out.println("Point is outside the circle");
             }

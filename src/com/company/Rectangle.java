@@ -27,7 +27,7 @@ public class Rectangle extends Shapes {
     }
 
     @Override
-    public void getShape() { //method to printle out the rectangle coordinates to the terminal
+    public void getShape() { //method to point out the rectangle coordinates to the terminal
         System.out.println("Rectangle ABCD has the following coordinates. " +
                 " A(bottom Right) = (" + bottomRightX + ", " + bottomRightY + ")" +
                 " B(bottom Left) = (" + bottomLeftX + ", " + bottomLeftY + ")" +
@@ -40,7 +40,7 @@ public class Rectangle extends Shapes {
         double length = bottomRightX - bottomLeftX;
         double width = topRightY - bottomRightY;
 
-        System.out.println("the rectangle " + this.name + " length: " + length);  //prdoubleing length
+        System.out.println("the rectangle " + this.name + " length: " + length);  //point length
         System.out.println("the rectangle " + this.name + " width: " + width);
 
         area = length * width;      //Area calculation
@@ -95,7 +95,7 @@ public class Rectangle extends Shapes {
         pX = X;
         pY = Y;
 
-        //Dividing the rectangel into 4 tringles. Tringle ABP, BCP, DPD and DAP.
+        //Dividing the rectangle into 4 triangles. Triangle ABP, BCP, DPD and DAP.
         //Finding the area of each triangle. It cannot be negative, it is an absolute number. Double because of division by 2.
 
         double ABP = Math.abs(((aX * (bY - pY)) + (bX * (pY - aY)) + (pX * (aY - bY)))/2);
@@ -103,10 +103,8 @@ public class Rectangle extends Shapes {
         double CDP = Math.abs(((cX * (dY - pY)) + (dX * (pY - cY)) + (pX * (cY - dY)))/2);
         double DAP = Math.abs(((dX * (aY - pY)) + (aX * (pY - dY)) + (pX * (dY - aY)))/2);
 
-        //if adding the area of the three triangles is the ecact same as the rectangle, it is in the rectangle.
-        if (this.area == ABP + BCP + CDP + DAP){
-            System.out.println(area + " it is in the rectangle");
-        }
+        //if adding the area of the three triangles is the exact same as the rectangle, it is in the rectangle.
+        if (this.area == ABP + BCP + CDP + DAP) System.out.println(area + " it is in the rectangle");
         else {
             System.out.println("The point (" + pX + ", " + pY + ")" + "is outside the rectangle");
         }
