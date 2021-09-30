@@ -32,8 +32,6 @@ public class Main {
         System.out.println();
         System.out.println();
 
-        rec.getName();
-
         Circle cir = new Circle(); //new circle object
         cir.setName("Ole");        //name the circle
         cir.getName();             //print name
