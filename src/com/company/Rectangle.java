@@ -13,7 +13,6 @@ public class Rectangle extends Shapes {
 
     @Override               //method to give the x and y coordinates for the Rectangle
     public void createShape() {
-
         bottomRightX = 5;
         bottomRightY = 7;
         bottomLeftX = 2;
@@ -90,26 +89,22 @@ public class Rectangle extends Shapes {
         double cY = topLeftY;
         double dX = topRightX;
         double dY = topRightY;
+
         pX = X;
         pY = Y;
-        //pX, py, aX, aY, bX, bY, cX, cY, dX, dY
-
+        //Dividing the rectangel into 4 tringles. Tringle ABP, BCP, DPD and DAP.
+        //Finding the area of each triangle. It cannot be negative, so math.abs is used. Double because of division by 2.
         double ABP = Math.abs(((aX * (bY - pY)) + (bX * (pY - aY)) + (pX * (aY - bY)))/2);
         double BCP = Math.abs(((bX * (cY - pY)) + (cX * (pY - bY)) + (pX * (bY - cY)))/2);
         double CDP = Math.abs(((cX * (dY - pY)) + (dX * (pY - cY)) + (pX * (cY - dY)))/2);
         double DAP = Math.abs(((dX * (aY - pY)) + (aX * (pY - dY)) + (pX * (dY - aY)))/2);
 
-        System.out.println(ABP);
-        System.out.println(BCP);
-        System.out.println(ABP + BCP + CDP + DAP);
-
+        //if adding the area of the three triangles is the ecact same as the rectangle, it is in the rectangle.
         if (this.area == ABP + BCP + CDP + DAP){
             System.out.println(area + " it is in the rectangle");
 
         } else {
             System.out.println("The podouble ("+pX+", "+pY+")"+"is outside the rectangle");
-
-
         }
     }
 }
