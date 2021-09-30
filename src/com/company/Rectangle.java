@@ -1,15 +1,15 @@
 package com.company;
 
 public class Rectangle extends Shapes {
-    int bottomRightX; //int x and y coordinates for each point
-    int bottomRightY;
-    int bottomLeftX;
-    int bottomLeftY;
-    int topLeftX;
-    int topLeftY;
-    int topRightX;
-    int topRightY;
-    int area;
+    double bottomRightX; //double x and y coordinates for each point
+    double bottomRightY;
+    double bottomLeftX;
+    double bottomLeftY;
+    double topLeftX;
+    double topLeftY;
+    double topRightX;
+    double topRightY;
+    double area;
 
     @Override               //method to give the x and y coordinates for the Rectangle
     public void createShape() {
@@ -24,7 +24,7 @@ public class Rectangle extends Shapes {
         topRightY = 9;
     }
 
-    @Override               //method to print out the rectangle coordinates to the terminal
+    @Override               //method to prdouble out the rectangle coordinates to the terminal
     public void getShape() {
         System.out.println("Rectangle ABCD has the following coordinates. " +
                 " A(bottom Right) = (" + bottomRightX + ", " + bottomRightY + ")" +
@@ -35,10 +35,10 @@ public class Rectangle extends Shapes {
 
     @Override
     public void calculateShapeArea() { //method to calculate the shape Area
-        int length = bottomRightX - bottomLeftX;
-        int width = topRightY - bottomRightY;
+        double length = bottomRightX - bottomLeftX;
+        double width = topRightY - bottomRightY;
 
-        System.out.println("the rectangle " + this.name + " length: " + length);  //printing length
+        System.out.println("the rectangle " + this.name + " length: " + length);  //prdoubleing length
         System.out.println("the rectangle " + this.name + " width: " + width);
 
         area = length * width;      //final calculation
@@ -47,21 +47,22 @@ public class Rectangle extends Shapes {
 
     @Override
     public void calculateShapeCircumference() {
-        int length = bottomRightX - bottomLeftX;
-        int width = topRightY - bottomRightY;
-        int perimeter = (length * 2) + (width * 2); //2a + 2b
+        double length = bottomRightX - bottomLeftX;
+        double width = topRightY - bottomRightY;
+        double perimeter = (length * 2) + (width * 2); //2a + 2b
         System.out.println("Perimeter is: " + perimeter);
     }
 
     @Override
     public void getCenter() {
-        int centreX = (topLeftX + bottomRightX) / 2; //(x,y) = (x2 + x1)/2, (y2+y1)/2
-        int centreY = (topLeftY + bottomRightY) / 2;
+        double centreX = (topLeftX + bottomRightX) / 2; //(x,y) = (x2 + x1)/2, (y2+y1)/2
+        double centreY = (topLeftY + bottomRightY) / 2;
         System.out.println("Centre is located at (" + centreX + ", " + centreY + ")");
+       
     }
 
     @Override
-    public void moveShape(int moveX, int moveY) {
+    public void moveShape(double moveX, double moveY) {
         bottomRightX += moveX;
         bottomLeftX += moveX;
         topRightX += moveX;
@@ -79,7 +80,7 @@ public class Rectangle extends Shapes {
                 " D(top Right) = (" + topRightX + ", " + topRightY + ")");
     }
 
-    public void pointGame(int X, int Y) { //
+    public void pointGame(double X, double Y) { //
 
         double aX = bottomRightX;
         double aY = bottomRightY;
@@ -106,7 +107,7 @@ public class Rectangle extends Shapes {
             System.out.println(area + " it is in the rectangle");
 
         } else {
-            System.out.println("The point ("+pX+", "+pY+")"+"is outside the rectangle");
+            System.out.println("The podouble ("+pX+", "+pY+")"+"is outside the rectangle");
 
 
         }

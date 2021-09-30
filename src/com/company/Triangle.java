@@ -9,6 +9,8 @@ public class Triangle extends Shapes {
     double topX;
     double topY;
     double area;
+    double centreY;
+    double centreX;
 
     @Override //method to give the rectangle its coordinates as seen in the parent abstract class
     public void createShape() {
@@ -60,13 +62,13 @@ public class Triangle extends Shapes {
 
     @Override
     public void getCenter() { //Cx = (Ax + BX + CX)/3, Cy = (Ay + By + Cy)
-        double centreX = (bottomRightX + bottomLeftX + topX)/3;
-        double centreY = (bottomRightY + bottomLeftY + topY)/3;
+        centreX = (bottomRightX + bottomLeftX + topX)/3;
+        centreY = (bottomRightY + bottomLeftY + topY)/3;
         System.out.println("Centre: ("+centreX+", "+centreY+")");
     }
 
     @Override
-    public void moveShape(int moveX, int moveY) {
+    public void moveShape(double moveX, double moveY) {
         bottomRightX+=moveX; //adding move x and y to the x and y coordinates of the triangle points
         bottomLeftX+=moveX;
         topX+=moveX;
@@ -81,7 +83,7 @@ public class Triangle extends Shapes {
                 " Point C(top) = (" + topX + ", " + topY + ")};");
     }
 
-    public void pointGame(int X, int Y){
+    public void pointGame(double X, double Y){
 
         double aX = bottomRightX;
         double aY = bottomRightY;
@@ -89,8 +91,8 @@ public class Triangle extends Shapes {
         double bY = bottomLeftY;
         double cX = topX;
         double cY = topY;
-        double pX = X;
-        double pY = Y;
+        pX = X;
+        pY = Y;
 
         double ABP = Math.abs(((aX * (bY - pY)) + (bX * (pY - aY)) + (pX * (aY - bY)))/2);
         double BCP = Math.abs(((bX * (cY - pY)) + (cX * (pY - bY)) + (pX * (bY - cY)))/2);

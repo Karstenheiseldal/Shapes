@@ -43,7 +43,7 @@ public class Circle extends Shapes {
     }
 
     @Override
-    public void moveShape(int moveX, int moveY) {
+    public void moveShape(double moveX, double moveY) {
         centreX+=moveX;
         centreY+=moveY;
 
@@ -51,5 +51,22 @@ public class Circle extends Shapes {
                 " Point centre = (" + centreX+ ", " + centreY + ")");
 
     }
+
+    @Override
+    public void pointGame(double X, double Y) {
+        pX = X;
+        pY = Y;
+        double cX = centreX;
+        double cY = centreY;
+
+        double distance = (pX - cX) * (pX-cX)*(pY - cY) * (pY-cY);
+            if (distance<=radius*radius){
+                System.out.println("Point is inside circle");
+            }
+            else{
+                System.out.println("Point is outside the circle");
+            }
+    }
+
 
 }
