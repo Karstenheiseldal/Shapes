@@ -2,7 +2,7 @@ package com.company;
 import java.lang.Math;
 
 public class Triangle extends Shapes {
-    double bottomRightX; //triangle points ACD x and y coordinates.
+    double bottomRightX; //triangle points ABC x and y coordinates.
     double bottomRightY;
     double bottomLeftX;
     double bottomLeftY;
@@ -12,8 +12,8 @@ public class Triangle extends Shapes {
     double centreY;
     double centreX;
 
-    @Override //method to give the rectangle its coordinates as seen in the parent abstract class
-    public void createShape() {
+    @Override
+    public void createShape() { //gives the attributes values
 
         bottomRightX = 10;
         bottomRightY = 7;
@@ -23,8 +23,8 @@ public class Triangle extends Shapes {
         topY = 9;
     }
 
-    @Override //method to reveal its coordinates as well
-    public void getShape() {
+    @Override
+    public void getShape() { //method to print its coordinates as well
         System.out.println("Triangle has the following coordinates. "+
                 " Point A(bottom Right) = (" + bottomRightX + ", " + bottomRightY + ")" +
                 " Point B(bottom Left) = (" + bottomLeftX + ", " + bottomLeftY + ")" +
@@ -43,20 +43,17 @@ public class Triangle extends Shapes {
     }
 
     @Override
-    public void calculateShapeCircumference() { //d=sq(x2-x1)2+(y2-y1)2
-        double unSquaredAB = (bottomLeftX-bottomRightX)*(bottomLeftX-bottomRightX)+(bottomLeftY-bottomRightY)*(bottomLeftY-bottomRightY);
-        double unSquaredBC = (topX - bottomRightX)*(topX - bottomRightX)+(topY-bottomLeftY)*(topY-bottomLeftY);
-        double unSquaredCA = (bottomRightX - topX)*(bottomRightX - topX)+(bottomRightY-topY);
+    public void calculateShapeCircumference() { //Distance formula d=sq(x2-x1)^2+(y2-y1)^2
+        double AB = Math.sqrt((bottomLeftX-bottomRightX)*(bottomLeftX-bottomRightX)+(bottomLeftY-bottomRightY)*(bottomLeftY-bottomRightY));
+        double BC = Math.sqrt((topX - bottomRightX)*(topX - bottomRightX)+(topY-bottomLeftY)*(topY-bottomLeftY));
+        double CA = Math.sqrt((bottomRightX - topX)*(bottomRightX - topX)+(bottomRightY-topY));
 
 
-        double sideAB = Math.sqrt(unSquaredAB);
-        double sideBC = Math.sqrt(unSquaredBC);
-        double sideCA = Math.sqrt(unSquaredCA);
-        double perimeter = sideAB + sideBC + sideCA;
+        double perimeter = AB + BC + CA;
 
-        System.out.println("side AB: "+sideAB);
-        System.out.println("side BC: "+sideBC);
-        System.out.println("side CA: "+sideCA);
+        System.out.println("side AB: "+AB);
+        System.out.println("side BC: "+BC);
+        System.out.println("side CA: "+CA);
         System.out.println("Perimeter: "+perimeter);
     }
 

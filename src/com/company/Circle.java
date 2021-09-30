@@ -1,8 +1,8 @@
 package com.company;
 
 public class Circle extends Shapes {
-    int centreX; //applied attributes
-    int centreY;
+    double centreX; //applied attributes
+    double centreY;
     double radius;
     double area;
 

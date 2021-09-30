@@ -11,7 +11,7 @@ public class Rectangle extends Shapes {
     double topRightY;
     double area;
 
-    @Override               //method to give the x and y coordinates for the Rectangle
+    @Override               //method to applying the x and y coordinates for the Rectangle. Override becasuse of Abstract.
     public void createShape() {
         bottomRightX = 5;
         bottomRightY = 7;
@@ -23,8 +23,8 @@ public class Rectangle extends Shapes {
         topRightY = 9;
     }
 
-    @Override               //method to prdouble out the rectangle coordinates to the terminal
-    public void getShape() {
+    @Override
+    public void getShape() { //method to prdouble out the rectangle coordinates to the terminal
         System.out.println("Rectangle ABCD has the following coordinates. " +
                 " A(bottom Right) = (" + bottomRightX + ", " + bottomRightY + ")" +
                 " B(bottom Left) = (" + bottomLeftX + ", " + bottomLeftY + ")" +
