@@ -1,18 +1,18 @@
 package com.company;
 
 public class Rectangle extends Shapes {
-    double bottomRightX; //double x and y coordinates for each point
+    public double bottomRightX; //double x and y coordinates for each point
     double bottomRightY;
     double bottomLeftX;
     double bottomLeftY;
-    double topLeftX;
+    public double topLeftX;
     double topLeftY;
     double topRightX;
     double topRightY;
-    double area;
-    double perimeter;
-    double centreX;
-    double centreY;
+    public double area;
+    public double perimeter;
+    public double centreX;
+    public double centreY;
 
     @Override
     public void createShape() {  //applying the x and y coordinates for the Rectangle.

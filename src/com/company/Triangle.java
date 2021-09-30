@@ -9,8 +9,8 @@ public class Triangle extends Shapes {
     double topX;
     double topY;
     double area;
-    double centreY;
-    double centreX;
+  public double centreY;
+  public double centreX;
 
     @Override
     public void createShape() { //gives the attributes values

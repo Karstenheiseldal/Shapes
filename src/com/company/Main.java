@@ -38,12 +38,12 @@ public class Main {
         cir.calculateShapeArea();  //calculates the area of the circle
         cir.calculateShapeCircumference(); //calculates and prints the circle circumference
         cir.getCenter();                    //prints the centre for the circle
-        //cir.moveShape(1,5);    //moves the circle's centre to given X and Y
+        cir.moveShape(1,5);    //moves the circle's centre to given X and Y
         cir.pointGame(11,10);          //insert point of choosing, it checks if it is inside or outside the circle
 
         System.out.println();
 
-        cir.euclideanDistance(cir.centreX,tri.centreX,cir.centreY,tri.centreY); //Insert point Ax, Bx, Ay, By, to dins euclidean
+        cir.euclideanDistance(cir.centreX, tri.centreX, cir.centreY,tri.centreY); //Insert point Ax, Bx, Ay, By, to dins euclidean
         //finding and printing the center between objectA and objectB.
     }
 }
