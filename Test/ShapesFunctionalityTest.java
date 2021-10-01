@@ -106,12 +106,6 @@ public class ShapesFunctionalityTest {
         chris.moveShape(2,4);
     }
 
-
-    @Test
-    public void euclideanDistanceTest() {
-
-
-    }
         @Test
         public void pointGameTest() {
             Rectangle rick = new Rectangle();
@@ -145,7 +139,6 @@ public class ShapesFunctionalityTest {
         truls.getName();
         chris.getName();
     }
-
 
     @Test
     public void euclideanDistance() {
